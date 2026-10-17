@@ -1,0 +1,256 @@
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px; 
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9; 
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #94a3b8; 
+    border-radius: 10px;
+    border: 2px solid #f1f5f9; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #64748b;  
+}
+
+
+.upload-page-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.6);  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 24px;
+  z-index: 99999; 
+  backdrop-filter: blur(4px);
+  box-sizing: border-box; 
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px; 
+    left: 20px;
+    background: #F1F5F9;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #64748B;
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #E2E8F0;
+    color: #0F172A;
+    transform: scale(1.1); 
+  }
+
+.upload-form-wrapper {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  padding: 28px 35px; 
+  max-width: 750px;  
+  width: 100%;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-out;
+  position: relative;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #F1F5F9;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #64748B;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: #E2E8F0;
+    color: #0F172A;
+    transform: rotate(90deg);
+}
+
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;  
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 20px;
+}
+
+.form-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 8px 0;
+}
+
+.form-header p {
+  font-size: 15px;
+  color: #64748B;
+  margin: 0;
+}
+
+.upload-form .form-group {
+  margin-bottom: 14px;  
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 60px;  
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.form-group select[disabled] {
+    background-color: #F1F5F9;
+    cursor: not-allowed;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.file-dropzone {
+  border: 2px dashed #E2E8F0;
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background-color: #F8FAFC;
+}
+
+.file-dropzone:hover {
+  border-color: #A5B4FC;
+  background-color: #F1F5F9;
+}
+
+.file-dropzone svg {
+  width: 32px; /* Smaller icon */
+  height: 32px;
+  color: #94A3B8;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.file-dropzone:hover svg {
+    color: #4F46E5;
+}
+
+.file-dropzone input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-dropzone p {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.file-dropzone p strong {
+  color: #4F46E5;
+  font-weight: 600;
+}
+
+.file-types {
+    display: block;
+    font-size: 12px;
+    color: #94A3B8;
+    margin-top: 4px; /* Reduced margin */
+}
+
+.submit-btn {
+  width: 100%;
+  background: #4F46E5;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+  margin-top: 12px; /* Reduced margin */
+}
+
+.submit-btn:hover {
+  background: #4338CA;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,0 +1,171 @@
+.sign-up-app-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-size: cover;
+  background-position: center;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.sign-up-form-container, 
+.sign-up-submitted-container {
+  width: 100%;
+  max-width: 28rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Consistent spacing */
+  transition: all 0.3s ease;
+}
+
+/* Header styles */
+.sign-up-header {
+  text-align: center;
+  /* margin: 0;
+  padding: 0; */
+}
+.sign-up-header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  /* margin: 0;
+  padding: 0; */
+}
+.sign-up-header p {
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+/* Form uses flexbox for vertical spacing */
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Grid layout for side-by-side fields */
+.sign-up-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem;
+}
+
+.sign-up-form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.sign-up-form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: #374151;
+}
+
+.sign-up-form-input {
+  padding: 0.5rem 0.75rem;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.85rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.sign-up-form-error {
+  color: #d93025;
+  font-size: 0.7rem;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Checkbox styles */
+.sign-up-checkbox-group {
+  display: flex;
+  align-items: center;
+}
+.sign-up-checkbox-input {
+  height: 0.875rem;
+  width: 0.875rem;
+  cursor: pointer;
+}
+.sign-up-checkbox-label {
+  margin-left: 0.4rem;
+  font-size: 0.8rem;
+  color: #374151;
+}
+
+/* Button styles */
+.sign-up-submit-button, 
+.sign-up-google-signin-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sign-up-submit-button {
+  color: white;
+  background-image: linear-gradient(to right, #8b5cf6, #ec4899);
+}
+
+/* Divider */
+.sign-up-divider {
+  display: flex;
+  align-items: center;
+  color: #4b5563;
+  font-size: 0.7rem;
+  margin: 0;
+}
+.sign-up-divider::before, 
+.sign-up-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #d1d5db;
+}
+.sign-up-divider:not(:empty)::before { margin-right: .5em; }
+.sign-up-divider:not(:empty)::after { margin-left: .5em; }
+
+/* Google Sign-In Button */
+.sign-up-google-signin-button {
+  background-color: #ffffff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+.sign-up-google-logo {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+/* Link and Footer */
+.sign-up-form-link {
+  font-weight: 600;
+  color: #4f46e5;
+  text-decoration: none;
+}
+.sign-up-footer-text {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #4b5563;
+}

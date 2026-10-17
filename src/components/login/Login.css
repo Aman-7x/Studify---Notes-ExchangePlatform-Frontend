@@ -1,0 +1,112 @@
+.signin-app-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-size: cover;
+  background-position: center;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.signin-form-container,
+.signin-submitted-container {
+  margin-top: 50px;
+  width: 500px;
+  /* max-width: 24rem; Smaller container for login */
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  padding: 1.75rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Spacing between elements */
+}
+
+.signin-header { text-align: center; margin: 0; }
+.signin-header h1 { font-size: 1.75rem; font-weight: 700; color: #1f2937; }
+.signin-header p { margin-top: 0.25rem; font-size: 0.9rem; color: #4b5563; }
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.signin-form-group { display: flex; flex-direction: column; }
+.signin-form-label { font-size: 0.8rem; font-weight: 600; margin-bottom: 0.25rem; color: #374151; }
+.signin-form-input {
+  padding: 0.6rem 0.8rem;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.9rem;
+}
+.signin-form-error { color: #d93025; font-size: 0.75rem; margin: 0; }
+
+.signin-extra-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signin-checkbox-group { display: flex; align-items: center; }
+.signin-checkbox-input { height: 0.875rem; width: 0.875rem; cursor: pointer; }
+.signin-checkbox-label { margin-left: 0.4rem; font-size: 0.8rem; color: #374151; }
+
+.signin-form-link { font-size: 0.8rem; font-weight: 600; color: #4f46e5; text-decoration: none; }
+
+.signin-submit-button,
+.signin-google-signin-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signin-submit-button {
+  color: white;
+  background-image: linear-gradient(to right, #8b5cf6, #ec4899);
+}
+
+.signin-divider {
+  display: flex;
+  align-items: center;
+  color: #4b5563;
+  font-size: 0.7rem;
+}
+.signin-divider::before,
+.signin-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #d1d5db;
+}
+.signin-divider:not(:empty)::before { margin-right: .5em; }
+.signin-divider:not(:empty)::after { margin-left: .5em; }
+
+.signin-google-signin-button {
+  background-color: #ffffff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+.signin-google-logo { height: 1rem; width: 1rem; margin-right: 0.5rem; }
+
+.signin-footer-text {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #4b5563;
+}

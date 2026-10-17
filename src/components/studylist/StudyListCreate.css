@@ -1,0 +1,312 @@
+/* File: src/components/studylist/CreateStudyListModal.css */
+
+ 
+
+.modal-container-nested{
+   
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 24px;
+  z-index: 99999; 
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;
+  
+}
+
+.modal-content-nested {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  /* UPDATED: Removed padding to allow header to span full width */
+  padding: 0; 
+  max-width: 850px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+  position: relative;
+  max-height: calc(100vh - 60px);
+  overflow: hidden; /* Changed to hidden to manage layout better */
+  display: flex; /* Added flexbox for layout */
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.studylist-form {
+    padding: 24px 40px; /* Moved padding here */
+    overflow-y: auto; /* Allow form to scroll if needed */
+}
+
+
+/* --- Custom Scrollbar for a cleaner look --- */
+.modal-content-nested::-webkit-scrollbar, .studylist-form::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-content-nested::-webkit-scrollbar-track, .studylist-form::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modal-content-nested::-webkit-scrollbar-thumb, .studylist-form::-webkit-scrollbar-thumb {
+  background-color: #D1D5DB;
+  border-radius: 3px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #F1F5F9;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #64748B;
+    transition: all 0.2s ease;
+    z-index: 10; /* Ensure close button is on top */
+}
+
+.close-btn:hover {
+    background-color: #E2E8F0;
+    color: #0F172A;
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* UPDATED: New attractive header styles */
+.modal-header {
+  text-align: center;
+  padding: 14px 30px;
+  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+  border-bottom: 1px solid #E2E8F0;
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.modal-header .header-icon {
+    background-color: #EEF2FF;
+    color: #4F46E5;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    border: 6px solid #fff; /* White border for a popped effect */
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.modal-header h3{
+  font-size: 20px;
+  font-weight: 600;
+  color: #0F172A;
+  margin: 0 15px 8px 15px;
+}
+
+.modal-header p {
+  font-size: 15px;
+  color: #64748B;
+  margin: 0;
+}
+
+.form-section {
+    margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label, .form-section > label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+/* --- Notes Grid --- */
+.notes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    min-height: 200px;
+}
+
+.notes-search-column, .selected-notes-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input-wrapper {
+    position: relative;
+    margin-bottom: 12px;
+}
+.search-input-wrapper svg {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #94A3B8;
+}
+.search-input-wrapper input {
+    width: 100%;
+    padding: 12px 14px 12px 40px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+.search-input-wrapper input:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.search-results-list, .selected-notes-list {
+    flex-grow: 1;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #F8FAFC;
+    overflow-y: auto;
+}
+
+.search-result-item, .selected-note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.search-result-item {
+    transition: background-color 0.2s ease;
+}
+.search-result-item:hover {
+    background-color: #F1F5F9;
+}
+.selected-note-item {
+    background-color: #fff;
+    border: 1px solid #E2E8F0;
+    margin-bottom: 8px;
+    animation: popIn 0.3s ease-out;
+}
+
+.add-btn, .remove-btn {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.add-btn { color: #16A34A; }
+.add-btn:hover { background-color: #DCFCE7; transform: scale(1.1); }
+.remove-btn { color: #DC2626; }
+.remove-btn:hover { background-color: #FEE2E2; transform: scale(1.1); }
+
+.empty-state {
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+    color: #94A3B8;
+}
+
+/* --- Footer --- */
+.form-footer {
+    display: grid;
+grid-template-columns: minmax(150px, 200px) minmax(200px, 1fr) 1fr;
+gap: 10px;
+
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    margin-top: 24px;
+    padding: 24px 40px; /* Moved padding here */
+    border-top: 1px solid #E2E8F0;
+    /* background-color: #F8FAFC; */
+    flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.toggle-switch label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+    cursor: pointer;
+}
+.toggle-switch input {
+    accent-color: #4F46E5;
+    width: 16px;
+    height: 16px;
+}
+
+.submit-btn {
+  width: 70%;
+  background: #4F46E5;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+}
+
+.submit-btn:hover {
+  background: #4338CA;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}

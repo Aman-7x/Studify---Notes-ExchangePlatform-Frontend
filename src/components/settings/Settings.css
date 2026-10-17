@@ -1,0 +1,176 @@
+
+
+.settings-container {
+  /* max-width: 800px; */
+  margin: 10px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  /* Removed border and shadow for a flatter look */
+}
+
+.settings-container h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 24px 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+/* --- Section Styling --- */
+.settings-section {
+  padding: 32px 0; /* Increased vertical padding */
+  border-bottom: 1px solid #E2E8F0;
+}
+.settings-section:last-child {
+  border-bottom: none;
+}
+
+.section-header h2 {
+  font-size: 22px; /* Increased size */
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #0F172A;
+}
+
+.section-header p {
+  font-size: 15px; /* Increased size */
+  color: #64748B;
+  margin: 0 0 24px 0;
+}
+
+/* --- Form Group Styling --- */
+.form-group {
+  margin-bottom: 24px; /* Increased spacing */
+}
+
+/* UPDATED: Container for label and char counter */
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 15px; /* Increased size */
+  font-weight: 500;
+  color: #334155;
+}
+
+/* NEW: Style for the character counter */
+.char-counter {
+    font-size: 13px;
+    color: #94A3B8;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea { /* Added textarea styles */
+  width: 100%;
+  padding: 12px 14px; /* Adjusted padding */
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  font-size: 16px; /* Increased size */
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box; /* Added for consistent sizing */
+  font-family: 'Inter', sans-serif; /* Ensure consistent font */
+  resize: vertical; /* Allow vertical resize only */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { /* Added textarea focus styles */
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Adjusted focus ring */
+}
+
+.form-group input[disabled] {
+    background-color: #F8FAFC; /* Lighter disabled color */
+    color: #64748B;
+    cursor: not-allowed;
+}
+
+/* --- Buttons --- */
+.save-btn {
+  background-color: #3B82F6;
+  color: #fff;
+  border: none;
+  padding: 12px 28px; /* Adjusted padding */
+  border-radius: 9999px; /* Pill shape */
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.save-btn:hover {
+  background-color: #2563EB;
+}
+
+/* --- Social & Delete Buttons --- */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 350px; /* Increased width */
+}
+
+.social-btn, .delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 16px; /* Adjusted padding */
+    border-radius: 9999px; /* Pill shape */
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.social-btn {
+    background-color: #fff;
+    color: #334155;
+    border: 1px solid #CBD5E1;
+}
+
+.social-btn:hover {
+    background-color: #F8FAFC;
+}
+
+.delete-btn {
+    background-color: transparent;
+    color: #EF4444;
+    border: 1px solid #FECACA;
+    max-width: 200px; /* Set max width */
+}
+
+.delete-btn:hover {
+    background-color: #FEF2F2;
+    border-color: #F87171;
+}
+
+/* --- Checkbox --- */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px; /* Increased size */
+    height: 18px; /* Increased size */
+    accent-color: #3B82F6;
+}
+
+.checkbox-group label {
+    font-size: 15px;
+    font-weight: 500;
+}

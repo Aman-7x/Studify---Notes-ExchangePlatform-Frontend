@@ -1,0 +1,42 @@
+/* Container for positioning the icon */
+.search-container {
+    position: relative;
+    width: 100%;
+    /* Change this value to make the search bar wider */
+    max-width: 950px; /* Example: Increased from 600px */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* The search input field */
+.search-input {
+    width: 100%;
+    padding: 15px 50px 15px 25px; /* Right padding to make space for the icon */
+    border-radius: 50px; /* Creates the pill shape */
+    border: 1px solid #dfe1e5;
+    box-shadow: 0px 1px 6px rgba(32, 33, 36, 0.1);
+    font-size: 16px;
+    outline: none; /* Removes the default blue outline on focus */
+    -webkit-appearance: none; /* Removes default search input styling in Safari */
+}
+
+/* Styling for the placeholder text */
+.search-input::placeholder {
+    color: #80868b;
+}
+
+.search-input:hover,
+.search-input:focus {
+    box-shadow: 0px 2px 8px rgba(32, 33, 36, 0.15);
+}
+
+/* The search icon */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%); /* Perfectly centers the icon vertically */
+    width: 20px;
+    height: 20px;
+    fill: #5f6368; /* Icon color */
+    pointer-events: none; /* Prevents the icon from being clickable */
+}
