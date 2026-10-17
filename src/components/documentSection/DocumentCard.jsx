@@ -1,7 +1,7 @@
  
 import { Document, Page, pdfjs } from "react-pdf";
 import { Link, useNavigate } from "react-router-dom";
-import PdfReader from "./PdfReader";
+ 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 function DocumentCard({ doc }) {
   const totalVotes = doc.likesCount + doc.dislikes.length;
