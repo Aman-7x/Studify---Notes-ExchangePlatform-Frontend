@@ -34,7 +34,7 @@ export const EndPoint = {
   CREATE_STUDYLIST: BASE_URL + "/study-lists",
   UPDATE_STUDYLIST: BASE_URL + "/study-lists",
   SEARCH_STUDYLIST: BASE_URL + "/study-lists",
-  PUBLIC_STUDYLIST: BASE_URL + "/study-lists/public",
+  PUBLIC_STUDYLIST: BASE_URL + "/study-lists/public   ",
   DELETE_STUDYLIST: BASE_URL + "/study-lists",
   STUDYLIST_BY_ID: BASE_URL + "/study-lists",
   My_STUDYLIST: BASE_URL + "/study-lists/me",
